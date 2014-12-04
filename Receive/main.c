@@ -7,8 +7,6 @@ uchar data_buff;
 uchar acception[8];//用来存放接收到的数据
 uchar j;
 
-// test
-
 unsigned char  RFConf[10]=
 {                             
   0x4c,                             //CH_NO,配置频段在430MHZ
