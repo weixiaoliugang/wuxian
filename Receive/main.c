@@ -5,7 +5,6 @@
 #define uint  unsigned int
 uchar data_buff;
 uchar acception[8];//用来存放接收到的数据
-uchar j;
 
 unsigned char  RFConf[10]=
 {                             
