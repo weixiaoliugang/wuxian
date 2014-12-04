@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>4132003075</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\nrf905.c</file>
+      <file>$PROJ_DIR$\nrf905.h</file>
+      <file>$PROJ_DIR$\USART.c</file>
+      <file>$PROJ_DIR$\system.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\USART.r43</file>
+      <file>$PROJ_DIR$\USART.h</file>
+      <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\nrf905.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\nrf905.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\system.r43</file>
+      <file>$TOOLKIT_DIR$\config\lnk430F169.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\system.pbi</file>
+      <file>$PROJ_DIR$\system.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\USART.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\wixian.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430x16x.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.d43</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.pbd</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 21</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 18</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 16 19 14 17 2 7</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 16 19 14 17 2 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\nrf905.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 16 19 14 17</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 16 19 14 17</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\USART.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 16 19 14</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 16 19 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\system.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 16 19 14</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 20 16 19 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 12 8 6 18 10 11 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 15 5 9 13</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
