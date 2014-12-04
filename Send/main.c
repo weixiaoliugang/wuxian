@@ -17,7 +17,7 @@ void main()
   Config905();//RFÅäÖÃ¼Ä´æÆ÷µÄ³õÊ¼»¯  
   while(1)
   {
-    TxPacket();
+    TxPacket(RBuff);
   }
 }
 

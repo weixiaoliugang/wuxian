@@ -53,7 +53,7 @@ void Spiwrite_byte(uchar byte)//用spi向无线模块寄存器中写数据
 
 
 //用无线模块发送数据
-void TxPacket(void)
+void TxPacket(uchar *sended_data)
 {
   uchar i,j;
   CSN_0;//使能无线模块的spi
@@ -61,7 +61,7 @@ void TxPacket(void)
   delay(1);
   for(i=0;i<8;i++)
   {
-    Spiwrite_byte(RBuff[i]);//写入要发送的数据
+    Spiwrite_byte(sended_data[i]);//写入要发送的数据
   }
   CSN_1;//关闭无线模块的spi
   delay(5);
