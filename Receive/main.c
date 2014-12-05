@@ -24,9 +24,9 @@ void main()
   WDTCTL = WDTPW + WDTHOLD;
   Init_Clk();//时钟初始化
   USART_Init();
-  _EINT();  //全局使能中断
   nRF905_IO_set();
   Config905();//RF配置寄存器的初始化
+  _EINT();  //全局使能中断
   while(1)
   {
       RxPacket();                  //接受数据

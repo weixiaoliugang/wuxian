@@ -13,12 +13,12 @@
       <file>$PROJ_DIR$\system.c</file>
       <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
       <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\USART.pbi</file>
       <file>$PROJ_DIR$\USART.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\nrf905.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\system.pbi</file>
       <file>$TOOLKIT_DIR$\config\lnk430F169.xcl</file>
       <file>$PROJ_DIR$\system.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\system.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\USART.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\nrf905.pbi</file>
       <file>$PROJ_DIR$\wixian.h</file>
       <file>$TOOLKIT_DIR$\inc\in430.h</file>
       <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
@@ -55,11 +55,11 @@
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 16 14 15 10 13 2 7</file>
+          <file> 16 14 15 11 13 2 8</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 14 15 10 13 2 7</file>
+          <file> 16 14 15 11 13 2 8</file>
         </tool>
       </inputs>
     </file>
@@ -67,22 +67,18 @@
       <name>$PROJ_DIR$\nrf905.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 21</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 8</file>
+          <file> 12</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 16 14 15 10 13</file>
+          <file> 16 14 15 11 13</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 14 15 10 13</file>
+          <file> 16 14 15 11 13</file>
         </tool>
       </inputs>
     </file>
@@ -95,17 +91,17 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 12</file>
+          <file> 7</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 16 14 15 10</file>
+          <file> 16 14 15 11</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 14 15 10</file>
+          <file> 16 14 15 11</file>
         </tool>
       </inputs>
     </file>
@@ -118,17 +114,17 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 11</file>
+          <file> 9</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 16 14 15 10</file>
+          <file> 16 14 15 11</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 14 15 10</file>
+          <file> 16 14 15 11</file>
         </tool>
       </inputs>
     </file>
@@ -137,7 +133,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 9 6 20 23 21 22 18</file>
+          <file> 10 6 20 23 21 22 18</file>
         </tool>
       </inputs>
     </file>
@@ -146,7 +142,7 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 12 5 8 11</file>
+          <file> 7 5 12 9</file>
         </tool>
       </inputs>
     </file>

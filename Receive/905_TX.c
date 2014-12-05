@@ -7,6 +7,19 @@ extern uchar data_buff;
 extern uchar acception[8];//用来存放接收到的数据
 extern uchar RFConf[10];
 
+void Config905() //初始化RF寄存器
+{
+  uchar i;
+  CSN_0;//使能无线模块的spi
+  Spiwrite_byte(WC);//写RF寄存器的预编译指令
+  for(i=0;i<10;i++)
+  {
+    Spiwrite_byte(RFConf[i]);//写RF中的各项配置信息
+  }
+  CSN_1;//禁止spi使能  
+}
+
+
 void nRF905_IO_set(void)
 {
         P4DIR |= 0x07; P4DIR &= 0x8F;   P4SEL&=0x88;  //p4.0,p4.1,p4.2输出，数字端口，p4.4,p4.5,p4.6输入，数字端口
@@ -89,14 +102,4 @@ void RxPacket()
     delay(5);//等待DR和AM都置低     
 }
 
-void Config905() //初始化RF寄存器
-{
-  uchar i;
-  CSN_0;//使能无线模块的spi
-  Spiwrite_byte(WC);//写RF寄存器的预编译指令
-  for(i=0;i<10;i++)
-  {
-    Spiwrite_byte(RFConf[i]);//写RF中的各项配置信息
-  }
-  CSN_1;//禁止spi使能  
-}
+
