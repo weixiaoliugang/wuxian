@@ -41,12 +41,5 @@
 #define RTA		0x23
 #define RRP		0x24
 
-void nRF905_IO_set(void);
-void SetRxMode(void);//设置接收模式
-void Spiwrite_byte(unsigned char byte);//用spi向无线模块寄存器中写数据
-unsigned char Spiread_byte();//用spi主机从无线模块寄存器中读数据
-unsigned char CheckDR(void);//检查是否有新数据传入 Data Ready
-void RxPacket();
-void Config905(); //初始化RF寄存器
 
 #endif

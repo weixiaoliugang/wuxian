@@ -3,8 +3,7 @@
 
 
 void USART_Init(void)
-{
-    
+{  
   P3SEL |= 0x30;    //P3.4,5为UART的收发端口
   U0CTL|=CHAR;     //8_bit的数据
   U0TCTL|=SSEL1;   //时钟源选择：smClk

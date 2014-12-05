@@ -3,8 +3,8 @@
 #include "wixian.h"
 
 extern uchar RBuff[8];
-uchar data_buff;
 extern uchar acception[8];
+//uchar  data_buff;
 uchar  address[4]={0xCC,0xCC,0xCC,0xCC};//接受的地址
 uchar  RFConf[10]=
 {                             
