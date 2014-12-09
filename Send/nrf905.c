@@ -5,14 +5,14 @@
 extern uchar RBuff[8];
 extern uchar acception[8];
 //uchar  data_buff;
-uchar  address[4]={0xCC,0xCC,0xCC,0xCC};//接受端的地址
+uchar  address[4]={0xBB,0xBB,0xBB,0xBB};//接受端的地址
 uchar  RFConf[10]=
 {                             
   0x4c,                             //CH_NO,配置频段在430MHZ
   0x0C,                             //输出功率为10db,不重发，节电为正常模式
   0x44,                             //地址宽度设置，为4字节
   0x08,0x08,                        //接收发送有效数据长度为8字节。。。。。。
-  0xCC,0xCC,0xCC,0xCC,              //本机的地址
+  0xAA,0xAA,0xAA,0xAA,              //本机的地址
   0x58,                              //CRC充许，8位CRC校验，外部时钟信号不使能，16M晶振
 };
 
@@ -88,8 +88,8 @@ void SetTxMode(void)//设置发送模式
 {
         PWR_1;
         TXEN_1;// Delay for mode change(>=650us)
-	TRX_CE_0;
-	delay(1); 					
+        TRX_CE_0;
+        delay(1); 					
 }
 
 unsigned char CheckDR(void)		//检查是否有新数据传入 Data Ready
@@ -120,7 +120,7 @@ void RxPacket()      //用无线模块接收数据
       acception[i]=Spiread_byte();
     }
     CSN_1;
-    delay(5);//等待DR和AM都置低     
+    delay(10);//等待DR和AM都置低     
 }
 
 
@@ -146,6 +146,7 @@ void TxPacket(uchar *sended_data)     //用无线模块发送数据
   }
   CSN_1;//关闭无线模块的spi
   SetTxMode();//设置发送模式
+  delay(5);
   TRX_CE_1;					// 打开发送使能
   delay(1);					// while (DR!=1);改改
   TRX_CE_0;	                                // 关闭发送使能

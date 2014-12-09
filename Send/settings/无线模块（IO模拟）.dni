@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=416530965
+Checksum=-1283482465
 [InterruptLog]
 LogEnabled=0
 SumEnabled=0
@@ -38,31 +38,16 @@ Control Register=0
 NextState0=0
 NextState1=0
 [Action Register]
-Break=6
-State Storage=6
+Break=2
+State Storage=2
 [CallStack]
 ShowArgs=0
 [Disassembly]
 MixedMode=1
 [watch_formats]
 Fmt0={W}0:Receive_Flag	3	0
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
-[CallStackLog]
-Enabled=0
-[DriverProfiling]
-Enabled=0
-Mode=0
-Graph=0
-Symbiont=0
 [Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\main.c}.31.9" 1 0 0 0 "" 0 ""
-Count=1
+Count=0
 [FET]
 Clock mode=14
 Extended Clock mode=-1
@@ -83,6 +68,13 @@ SP=0
 SR=0
 all registers=0
 File name=
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
 [Aliases]
 A0=_ "C:\Users\LG\Desktop\无线发送模块（修改）\USART.c" ""
 A1=_ "C:\Users\LG\Desktop\无线接收模块（发送）\USART.c" ""
@@ -95,3 +87,10 @@ A7=_ "C:\Users\LG\Desktop\无线接收模块（修改）\nrf905.c" ""
 A8=_ "C:\Users\LG\Desktop\无线接收模块（修改）\system.c" ""
 Count=9
 SuppressDialog=0
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0

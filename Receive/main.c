@@ -9,7 +9,7 @@
 
 uchar RBuff[8]={1,1,1,1,1,1,1,1};
 uchar acception[8];//用来存放接收到的数据
-
+uint count=0;//计数值
 void main()
 {
   uchar j;
@@ -19,21 +19,17 @@ void main()
   _EINT();  //全局使能中断
   nRF905_IO_set();
   Config905();//RF配置寄存器的初始化
-  
   while(1)
   {
-      RxPacket(); //接受数据
-     /* for(j=0;j<8;j++)//送到串口显示
-      {
-        U0TXBUF=acception[j];
-        while((IFG1&UTXIFG0)==0); //等待发送完成
-      }*/
-      
-      P4DIR=0x47;
-      P4OUT&=~BIT6;
-      P4DIR=0x07;
+      RxPacket(); //接受数据      
       delay(10);
-      TxPacket(RBuff); //发送应答信号
-      
+      for(j=2;j>0;j--)
+      {
+        TxPacket(RBuff); //发送应答信号
+        P4DIR=0x47;
+        P4OUT&=~BIT6;
+        P4DIR=0x07;
+      }
+      count++;
   }
 }

@@ -10,9 +10,9 @@
 uchar RBuff[8];
 uchar acception[8]={3,3,3,3,3,3,3,3};
 uchar Receive_Flag=0;
-uchar aa[8]={3,3,3,3,3,3,3,3};
+uchar aa[8]={5,5,5,5,5,5,5,5};
 uchar flag=0;
-
+uint  count=0;
 void main()
 {
   uchar j;
@@ -40,13 +40,13 @@ void main()
     }
     else
     {
-     
-      for(j=100;j>0;j--)
+      for(j=2;j>0;j--)
       {
         TxPacket(aa);
       }
       response();//应答函数
       Receive_Flag=0;//接收标志位清0
+      count++;
     }
   }
 }

@@ -30,7 +30,7 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=1195521332
+Checksum=14485174
 [State Storage]
 Control Register=0
 [Sequencer]
@@ -38,7 +38,7 @@ Control Register=0
 NextState0=0
 NextState1=0
 [Action Register]
-Break=14
+Break=2
 State Storage=0
 [CallStack]
 ShowArgs=0
@@ -46,13 +46,12 @@ ShowArgs=0
 MixedMode=1
 [array_types]
 Fmt0=unsigned char[32]	4	0
-Fmt1=unsigned char[8]	2	0
+Fmt1=unsigned char[8]	3	0
 [watch_formats]
 Fmt0={W}0:MISO	4	0
+Fmt1={W}0:RBuff	0	1
 [Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\main.c}.36.7" 1 0 0 0 "" 0 ""
-Bp1=_ "STD_CODE" "{$PROJ_DIR$\main.c}.32.7" 1 0 0 0 "" 0 ""
-Count=2
+Count=0
 [FET]
 Clock mode=14
 Extended Clock mode=-1

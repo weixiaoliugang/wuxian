@@ -8,20 +8,20 @@
     <outputs>
       <file>$PROJ_DIR$\905_TX.c</file>
       <file>$PROJ_DIR$\main.c</file>
-      <file>$PROJ_DIR$\system.c</file>
-      <file>$PROJ_DIR$\system.h</file>
       <file>$PROJ_DIR$\USART.c</file>
+      <file>$PROJ_DIR$\system.h</file>
+      <file>$PROJ_DIR$\system.c</file>
       <file>$PROJ_DIR$\Debug\Obj\905_TX.r43</file>
       <file>$PROJ_DIR$\Debug\Obj\system.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\905_TX.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\USART.r43</file>
+      <file>$TOOLKIT_DIR$\config\lnk430F149.xcl</file>
       <file>$PROJ_DIR$\wuxian.h</file>
       <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\config\lnk430F149.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\USART.r43</file>
       <file>$PROJ_DIR$\Debug\Exe\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#x63A5;&#x53D7;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.d43</file>
-      <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
       <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\system.r43</file>
+      <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
       <file>$TOOLKIT_DIR$\inc\msp430x16x.h</file>
       <file>$PROJ_DIR$\USART.h</file>
       <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
@@ -35,21 +35,21 @@
       <name>$PROJ_DIR$\905_TX.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 7</file>
-        </tool>
-        <tool>
           <name>ICC430</name>
           <file> 5</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
+          <name>ICC430</name>
           <file> 16 20 10 3 9</file>
         </tool>
         <tool>
-          <name>ICC430</name>
+          <name>BICOMP</name>
           <file> 16 20 10 3 9</file>
         </tool>
       </inputs>
@@ -58,22 +58,86 @@
       <name>$PROJ_DIR$\main.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 14</file>
-        </tool>
-        <tool>
           <name>ICC430</name>
           <file> 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
+          <name>ICC430</name>
           <file> 16 20 10 9 21 3 17</file>
         </tool>
         <tool>
-          <name>ICC430</name>
+          <name>BICOMP</name>
           <file> 16 20 10 9 21 3 17</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\USART.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 16 20 10 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16 20 10 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\system.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 16 20 10 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16 20 10 3</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#x63A5;&#x53D7;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.d43</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 8 15 5 11 22 14 18</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#x63A5;&#x53D7;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 7 23 13 6</file>
         </tool>
       </inputs>
     </file>
@@ -85,70 +149,6 @@
           <file> 12</file>
         </tool>
       </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\system.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 6</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 15</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 16 20 10 3</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 16 20 10 3</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\USART.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 23</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 8</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 16 20 10 3</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 16 20 10 3</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#x63A5;&#x53D7;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.d43</name>
-      <inputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 11 13 5 8 22 15 18</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Obj\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#x63A5;&#x53D7;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-          <file> 7 23 14 6</file>
-        </tool>
-      </inputs>
     </file>
   </configuration>
   <configuration>
