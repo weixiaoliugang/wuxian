@@ -10,8 +10,8 @@ uchar  RFConf[10]=
   0x4c,                             //CH_NO,配置频段在430MHZ
   0x0C,                             //输出功率为10db,不重发，节电为正常模式
   0x44,                             //地址宽度设置，为4字节
-  0x20,0x20,                        //接收发送有效数据长度为32字节
-  0xCC,0xCC,0xCC,0xCC,              //接收地址
+  0x08,0x08,                        //接收发送有效数据长度为8字节。。。。
+  0xCC,0xCC,0xCC,0xCC,              //本机的地址
   0x58,                              //CRC充许，8位CRC校验，外部时钟信号不使能，16M晶振
 };
 
@@ -61,8 +61,6 @@ unsigned char Spiread_byte()//用spi主机从无线模块寄存器中读数据
   return data_buff;
 }
 
-
-
 void Config905() //初始化RF寄存器
 {
   uchar i;
@@ -77,6 +75,7 @@ void Config905() //初始化RF寄存器
 
 void SetRxMode(void)//设置接收模式
 {
+        PWR_1;
         TXEN_0;
 	TRX_CE_1;
 	delay(1); 					// Delay for mode change(>=650us)
@@ -84,6 +83,7 @@ void SetRxMode(void)//设置接收模式
 
 void SetTxMode(void)//设置发送模式
 {
+        PWR_1;
         TXEN_1;// Delay for mode change(>=650us)
 	TRX_CE_0;
 	delay(1); 					
@@ -148,11 +148,6 @@ void TxPacket(uchar *sended_data)     //用无线模块发送数据
   TRX_CE_0;	                                // 关闭发送使能
 }
 
-/*void response()  不需要应答信号
-{
-  RxPacket(); //接收应答信号
-  while((acception[0]==1)&&(acception[7]==1));//判断是否接收到应答信号
-}*/
 
 
 

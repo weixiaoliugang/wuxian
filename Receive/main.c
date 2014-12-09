@@ -16,18 +16,24 @@ void main()
   WDTCTL = WDTPW + WDTHOLD;
   Init_Clk();//时钟初始化
   USART_Init();
+  _EINT();  //全局使能中断
   nRF905_IO_set();
   Config905();//RF配置寄存器的初始化
-  _EINT();  //全局使能中断
+  
   while(1)
   {
       RxPacket(); //接受数据
-      for(j=0;j<8;j++)//送到串口显示
+     /* for(j=0;j<8;j++)//送到串口显示
       {
         U0TXBUF=acception[j];
         while((IFG1&UTXIFG0)==0); //等待发送完成
-      }
-      TxPacket(RBuff); //发送应答信号
+      }*/
+      
+      P4DIR=0x47;
+      P4OUT&=~BIT6;
+      P4DIR=0x07;
       delay(10);
+      TxPacket(RBuff); //发送应答信号
+      
   }
 }

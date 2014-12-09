@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=151964553
+Checksum=416530965
 [InterruptLog]
 LogEnabled=0
 SumEnabled=0
@@ -38,12 +38,14 @@ Control Register=0
 NextState0=0
 NextState1=0
 [Action Register]
-Break=2
-State Storage=2
+Break=6
+State Storage=6
 [CallStack]
 ShowArgs=0
 [Disassembly]
 MixedMode=1
+[watch_formats]
+Fmt0={W}0:Receive_Flag	3	0
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
@@ -59,7 +61,8 @@ Mode=0
 Graph=0
 Symbiont=0
 [Breakpoints]
-Count=0
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\main.c}.31.9" 1 0 0 0 "" 0 ""
+Count=1
 [FET]
 Clock mode=14
 Extended Clock mode=-1

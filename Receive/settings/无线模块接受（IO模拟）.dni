@@ -30,7 +30,7 @@ ActionState=1
 Enabled=0
 ShowSource=1
 [DebugChecksum]
-Checksum=1348852889
+Checksum=1195521332
 [State Storage]
 Control Register=0
 [Sequencer]
@@ -38,7 +38,7 @@ Control Register=0
 NextState0=0
 NextState1=0
 [Action Register]
-Break=2
+Break=14
 State Storage=0
 [CallStack]
 ShowArgs=0
@@ -49,28 +49,16 @@ Fmt0=unsigned char[32]	4	0
 Fmt1=unsigned char[8]	2	0
 [watch_formats]
 Fmt0={W}0:MISO	4	0
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
-[CallStackLog]
-Enabled=0
-[DriverProfiling]
-Enabled=0
-Mode=0
-Graph=0
-Symbiont=0
 [Breakpoints]
-Count=0
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\main.c}.36.7" 1 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\main.c}.32.7" 1 0 0 0 "" 0 ""
+Count=2
 [FET]
 Clock mode=14
 Extended Clock mode=-1
 Secure Password=
 Extended Clock Control Enable=1
-Advanced Extended Clock Control=0
+Advanced Extended Clock Control=1
 Emulation mode=0
 Free running=0
 Shutting Down=3
@@ -85,7 +73,21 @@ SP=0
 SR=0
 all registers=0
 File name=
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
 [Aliases]
 A0=_ "C:\Users\LG\Desktop\无线模块接受（修改）\905_TX.c" ""
 Count=1
 SuppressDialog=0
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0
