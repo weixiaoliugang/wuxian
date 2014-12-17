@@ -8,7 +8,7 @@
 #include "USART.h"
 
 uchar RBuff[8];
-uchar acception[8]={3,3,3,3,3,3,3,3};
+uchar acception[1]={3};
 uchar Receive_Flag=0;
 uchar aa[8]={5,5,5,5,5,5,5,5};
 uchar flag=0;
@@ -28,7 +28,7 @@ void main()
     {
       if(Receive_Flag==1)
       {      
-        TxPacket(RBuff);
+        TxPacket(RBuff,8);
         Receive_Flag=0;//接收标志位清0
         flag=1;       //此句程序测试所用
         delay(10);
@@ -40,13 +40,12 @@ void main()
     }
     else
     {
-      for(j=2;j>0;j--)
+      for(j=50;j>0;j--)
       {
-        TxPacket(aa);
+        TxPacket(aa,8);
       }
       response();//应答函数
       Receive_Flag=0;//接收标志位清0
-      count++;
     }
   }
 }

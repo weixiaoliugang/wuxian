@@ -7,7 +7,7 @@
 #include "system.h"
 #include "USART.h"
 
-uchar RBuff[8]={1,1,1,1,1,1,1,1};
+uchar RBuff[1]={1};
 uchar acception[8];//用来存放接收到的数据
 uint count=0;//计数值
 void main()
@@ -25,7 +25,7 @@ void main()
       delay(10);
       for(j=2;j>0;j--)
       {
-        TxPacket(RBuff); //发送应答信号
+        TxPacket(RBuff,1); //发送应答信号
         P4DIR=0x47;
         P4OUT&=~BIT6;
         P4DIR=0x07;
