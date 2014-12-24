@@ -11,8 +11,8 @@ void Init_Clk(void)
    for(i= 0xff; i>0; i--); //延时,待稳定. 
    } 
   while ((IFG1 & OFIFG)!=0);  //若振荡器失效标志有效,一直等待 
-   BCSCTL2 =SELM1+SELS;    //使MCLK选择XT2且MCLK=XT2=8MHZ ，使SMCLK选择XT2且SMCLK=XT2=8MHZ
-   			
+   BCSCTL2 |=SELM_2;   //使MCLK选择XT2且MCLK=XT2=8MHZ ，使SMCLK选择XT2且SMCLK=XT2=8MHZ
+   BCSCTL2 |=SELS;  		
 }
 
 void delay(uint n)//延时1ms

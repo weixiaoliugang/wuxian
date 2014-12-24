@@ -14,20 +14,20 @@
       <file>$PROJ_DIR$\Debug\Obj\905_TX.r43</file>
       <file>$PROJ_DIR$\Debug\Obj\system.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\905_TX.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\USART.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\system.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
-      <file>$PROJ_DIR$\wuxian.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
       <file>$PROJ_DIR$\Debug\Exe\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#x63A5;&#x53D7;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.d43</file>
+      <file>$PROJ_DIR$\Debug\Obj\USART.r43</file>
+      <file>$PROJ_DIR$\wuxian.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\system.r43</file>
+      <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
       <file>$TOOLKIT_DIR$\config\lnk430F149.xcl</file>
       <file>$TOOLKIT_DIR$\inc\msp430x16x.h</file>
       <file>$PROJ_DIR$\USART.h</file>
-      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#x63A5;&#x53D7;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.pbd</file>
       <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\&#x65e0;&#x7eBF;&#x6A21;&#x5757;&#x63A5;&#x53D7;&#xFF08;IO&#x6A21;&#x62DF;&#xFF09;.pbd</file>
       <file>$PROJ_DIR$\nrf905.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
       <file>$PROJ_DIR$\Debug\Obj\USART.pbi</file>
     </outputs>
@@ -46,11 +46,11 @@
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 16 20 13 3 12</file>
+          <file> 16 18 12 3 10</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 20 13 3 12</file>
+          <file> 16 18 12 3 10</file>
         </tool>
       </inputs>
     </file>
@@ -63,17 +63,17 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 10</file>
+          <file> 21</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 16 20 13 12 21 3 17</file>
+          <file> 16 18 12 10 20 3 17</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 20 13 12 21 3 17</file>
+          <file> 16 18 12 10 20 3 17</file>
         </tool>
       </inputs>
     </file>
@@ -82,7 +82,7 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 8</file>
+          <file> 9</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -92,11 +92,11 @@
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 16 20 13 3</file>
+          <file> 16 18 12 3</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 20 13 3</file>
+          <file> 16 18 12 3</file>
         </tool>
       </inputs>
     </file>
@@ -105,7 +105,7 @@
       <outputs>
         <tool>
           <name>ICC430</name>
-          <file> 9</file>
+          <file> 13</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -115,11 +115,11 @@
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 16 20 13 3</file>
+          <file> 16 18 12 3</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 20 13 3</file>
+          <file> 16 18 12 3</file>
         </tool>
       </inputs>
     </file>
@@ -128,7 +128,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 15 11 5 8 22 9 18</file>
+          <file> 15 14 5 9 22 13 11</file>
         </tool>
       </inputs>
     </file>
@@ -137,7 +137,7 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 7 23 10 6</file>
+          <file> 7 23 21 6</file>
         </tool>
       </inputs>
     </file>
@@ -146,7 +146,7 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 14</file>
+          <file> 8</file>
         </tool>
       </outputs>
     </file>

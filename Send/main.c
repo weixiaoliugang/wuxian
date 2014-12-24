@@ -15,7 +15,6 @@ uchar flag=0;
 uint  count=0;
 void main()
 {
-  uchar j;
   WDTCTL = WDTPW + WDTHOLD;
   Init_Clk();//时钟初始化
   USART_Init();//串口初始化
@@ -31,21 +30,16 @@ void main()
         TxPacket(RBuff,8);
         Receive_Flag=0;//接收标志位清0
         flag=1;       //此句程序测试所用
-        delay(10);
-        P4DIR=0x47;
-        P4OUT&=~BIT6;
-        P4DIR=0x07;
         response();
+        delay(1);
       } 
     }
     else
-    {
-      for(j=50;j>0;j--)
-      {
-        TxPacket(aa,8);
-      }
-      response();//应答函数
+    { 
+      TxPacket(aa,8); 
+      response();//应答函数     
       Receive_Flag=0;//接收标志位清0
+      delay(1);
     }
   }
 }

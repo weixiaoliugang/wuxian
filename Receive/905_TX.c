@@ -16,7 +16,10 @@ uchar  RFConf[10]=
 };
 
 void nRF905_IO_set(void)       //端口设置
-{
+{  
+        P1DIR=0xfe;//高四位输出，低四位输入
+        P1IES=0x00;//上升沿触发
+        P1IE=0x01;//开启低四位的外部中断使能
         P4DIR |= 0x07;
         P4DIR &= 0x8F;    
         P5DIR = 0x0B;
@@ -42,7 +45,7 @@ void Spiwrite_byte(uchar byte)//用spi向无线模块寄存器中写数据
       MOSI_0;
     SCK_1;                 //下降沿写
     data_buff=data_buff<<1;//为下一次的写作准备
-    delay(1);
+    //delay(1);
     SCK_0;   
   }
 }
@@ -107,8 +110,6 @@ unsigned char CheckDR(void)		//检查是否有新数据传入 Data Ready
 void RxPacket()      //用无线模块接收数据
 {
     uchar i;
-    SetRxMode();//设置接受模式
-    delay(1);
     while(CheckDR()==0);//判断是否有数据传入
     TRX_CE_0;
     CSN_0;//使能无线模块的spi
@@ -120,13 +121,15 @@ void RxPacket()      //用无线模块接收数据
       acception[i]=Spiread_byte();
     }
     CSN_1;
-    delay(5);//等待DR和AM都置低     
+    delay(10);//等待DR和AM都置低     
 }
 
 
 void TxPacket(uchar *sended_data,uchar length)     //用无线模块发送数据
 {
   uchar i,j;
+  SetTxMode();//设置发送模式
+  //delay(5);
   CSN_0;//使能无线模块的spi
   Spiwrite_byte(WTP);//写数据发送寄存器的预编译指令
   delay(1);
@@ -135,8 +138,7 @@ void TxPacket(uchar *sended_data,uchar length)     //用无线模块发送数据
     Spiwrite_byte(sended_data[i]);//写入要发送的数据
   }
   CSN_1;//关闭无线模块的spi
-  delay(5);
-  
+  delay(1);
   CSN_0;//使能无线模块的spi
   Spiwrite_byte(WTA);//写数据发送寄存器的预编译指令
   delay(1);
@@ -144,11 +146,9 @@ void TxPacket(uchar *sended_data,uchar length)     //用无线模块发送数据
   {
     Spiwrite_byte(address[j]);  
   }
-  CSN_1;//关闭无线模块的spi
-  SetTxMode();//设置发送模式
-  delay(5);
+  CSN_1;//关闭无线模块的spi 
   TRX_CE_1;					// 打开发送使能
-  delay(1);					// while (DR!=1);改改
+  delay(10);					// 很重要，一定要保证足够的时间
   TRX_CE_0;	                                // 关闭发送使能
 }
 
